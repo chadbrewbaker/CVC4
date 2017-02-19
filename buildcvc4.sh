@@ -23,9 +23,9 @@ export PATH=$PATH:$JAVA_HOME/bin
 export JAVA_CPPFLAGS=-I$JAVA_HOME/include
 touch envdata
 echo "getting paths of binaries" >> envdata
-which java >> envdata
-java -version >> envdata
-which javac >> envdata
+#which java >> envdata
+#java -version >> envdata
+#which javac >> envdata
 echo "where is clang" >> envdata
 which clang-3.6 >> envdata
 clang-3.8 --version >> envdata
@@ -35,8 +35,8 @@ uname -a >> envdata
 free -m >> envdata
 ldd --version >> envdata
 cat /proc/cpuinfo >> envdata
-git clone https://github.com/chadbrewbaker/CVC4.git
-pushd CVC4
+#git clone https://github.com/chadbrewbaker/CVC4.git
+#pushd CVC4
 ./autogen.sh
 #./configure --with-build=debug --enable-language-bindings=java,c --disable-proof
 #make -n > recon1
