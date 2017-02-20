@@ -28,7 +28,7 @@ echo "getting paths of binaries" >> envdata
 #which javac >> envdata
 echo "where is clang" >> envdata
 which clang-3.6 >> envdata
-clang-3.8 --version >> envdata
+#clang-3.8 --version >> envdata
 which llvm-symbolizer >> envdata
 echo "get system info" >> envdata
 uname -a >> envdata
@@ -40,8 +40,8 @@ cat /proc/cpuinfo >> envdata
 ./autogen.sh
 #./configure --with-build=debug --enable-language-bindings=java,c --disable-proof
 #make -n > recon1
-./configure  --with-build=debug --enable-shared  --enable-language-bindings=java,c CXXTEST=$HOME/cxxtest --disable-proof \
-CC=/usr/bin/clang-3.6 CXX=/usr/bin/clang++-3.6 LD=/usr/bin/clang-3.6
+./configure  --with-build=debug --enable-shared  --enable-language-bindings=java,c CXXTEST=$HOME/cxxtest --disable-proof 
+#iCC=/usr/bin/clang-3.6 CXX=/usr/bin/clang++-3.6 LD=/usr/bin/clang-3.6
 cat make > recon1
 make -n > recon2
 #CFLAGS="-fno-omit-frame-pointer  -g" \
